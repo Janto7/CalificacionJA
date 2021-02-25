@@ -10,9 +10,14 @@ public class Notas {
 		String calificacion = "";
 		System.out.print("Introduzca una nota: ");
 		n = reader.nextInt();
-		if (n >= 0 && n < 5)
+		obtenerNota(reader, n);
+	}
+
+	private static void obtenerNota(Scanner reader, int nota) {
+		String calificacion;
+		if (nota >= 0 && nota < 5)
 			calificacion = "Suspenso";
-		else if (n >= 5 && n <= 10)
+		else if (nota >= 5 && nota <= 10)
 			calificacion = "Aprobado";
 		else
 			calificacion = "La nota introducida no es correcta";
